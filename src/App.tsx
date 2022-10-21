@@ -1,13 +1,10 @@
 import React from "react";
 import "./App.css";
 import { CookiesProvider } from "react-cookie";
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  Link,
-} from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import ErrorBoundary from "antd/lib/alert/ErrorBoundary";
+import CLayout from "./layout/CLayout";
+import { Home } from "./pages/Home";
 
 function App() {
   return (
@@ -17,13 +14,12 @@ function App() {
           <BrowserRouter>
             <CLayout>
               <Routes>
-                <Route exact path="/" element={<Home/>}/>
-          
-                <Route path="users/*" element={<Users />} />
+                <Route path="/" element={<Home />} />
 
-                <Route path={"*"} element={<NotFound/>}>
-            
-              </Switch>
+                {/* <Route path="users/*" element={<Users />} />
+
+                <Route path={"*"} element={<NotFound/>}> */}
+              </Routes>
             </CLayout>
           </BrowserRouter>
         </CookiesProvider>
@@ -32,7 +28,8 @@ function App() {
   );
 }
 
-function Users() {
+{
+  /* function Users() {
   return (
     <div>
       <Routes>
@@ -41,6 +38,7 @@ function Users() {
       </Routes>
     </div>
   );
+} */
 }
 
 export default App;
