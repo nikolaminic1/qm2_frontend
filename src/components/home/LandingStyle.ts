@@ -2,7 +2,6 @@ import { Layout } from "antd";
 import styled from "styled-components";
 
 export const LandingMainDiv = styled.div`
-  background: #fff;
   position: relative;
   width: 100%;
 `;
@@ -21,8 +20,8 @@ export const SecondaryCarouselDiv = styled.div`
   transform: translateY(-50%);
   background-color: #edede9;
   width: 450px;
-  height: 650px;
-  border-radius: 50px 0 0 50px;
+  height: 630px;
+  border-radius: 40px 0 0 40px;
 `;
 
 export const SlideOneMainImage = styled.img`
@@ -35,4 +34,15 @@ export const SlideOneMainImage = styled.img`
 
 export const SecondPartMainDiv = styled.div`
   height: 100vh;
+  background-color: #edede9;
+`;
+
+export const ThirdCarouselDiv = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: calc(100% - 450px);
+  background-color: #edede9;
+  height: 80px;
+  border-radius: 0 40px 0 0;
 `;
