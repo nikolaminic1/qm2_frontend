@@ -12,13 +12,11 @@ const MainCarousel: FC<MainCarouselProps> = ({ slidesData }): ReactElement => {
   const onChange = (currentSlide: number) => {};
 
   return (
-    <div>
-      <Carousel afterChange={onChange} autoplay>
-        <SlideOne slideOneData={slidesData.slideOne} />
-        {/* <SlideTwo slideTwoData={slidesData} />
+    <Carousel afterChange={onChange} autoplay>
+      <SlideOne slideOneData={slidesData.slideOne} />
+      {/* <SlideTwo slideTwoData={slidesData} />
       <SlideThree slideThreeData={slidesData} /> */}
-      </Carousel>
-    </div>
+    </Carousel>
   );
 };
 

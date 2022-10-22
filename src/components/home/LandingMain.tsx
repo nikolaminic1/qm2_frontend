@@ -1,5 +1,5 @@
 import React, { FC, ReactElement, useState } from "react";
-import { LandingMainDiv } from "./LandingStyle";
+import { LandingMainDiv, SecondaryCarouselDiv } from "./LandingStyle";
 import MainCarousel from "./MainCarousel";
 
 interface LandingProps {
@@ -13,6 +13,7 @@ const Landing: FC<LandingProps> = ({ data }): ReactElement => {
   return (
     <LandingMainDiv>
       <MainCarousel slidesData={data} />
+      <SecondaryCarouselDiv></SecondaryCarouselDiv>
     </LandingMainDiv>
   );
 };

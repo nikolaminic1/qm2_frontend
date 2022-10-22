@@ -2,6 +2,7 @@ import React, { FC } from "react";
 import Landing from "../components/home/LandingMain";
 import data from "../_data.json";
 import imgg from "../assets/home/landing/kitchen1.jpg";
+import SecondPart from "../components/home/SecondPart";
 
 export const Home: FC = () => {
   console.log(data);
@@ -9,6 +10,7 @@ export const Home: FC = () => {
   return (
     <div>
       <Landing data={data.home.landing} />
+      <SecondPart />
     </div>
   );
 };
