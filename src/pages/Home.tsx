@@ -1,12 +1,14 @@
 import React, { FC } from "react";
 import Landing from "../components/home/LandingMain";
-import dataHome from "../components/home/_data.json";
+import data from "../_data.json";
+import imgg from "../assets/home/landing/kitchen1.jpg";
 
 export const Home: FC = () => {
+  console.log(data);
+
   return (
     <div>
-      <Landing data={dataHome.landing} />
-      <img src={dataHome.landing.slideOne.main_photo} />
+      <Landing data={data.home.landing} />
     </div>
   );
 };

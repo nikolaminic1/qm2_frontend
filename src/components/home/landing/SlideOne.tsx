@@ -1,5 +1,5 @@
 import React, { FC, ReactElement } from "react";
-import { SlideOneMainDiv } from "../LandingStyle";
+import { SlideOneMainDiv, SlideOneMainImage } from "../LandingStyle";
 
 interface SlideOneProps {
   slideOneData: any;
@@ -10,7 +10,7 @@ const SlideOne: FC<SlideOneProps> = ({ slideOneData }): ReactElement => {
 
   return (
     <SlideOneMainDiv>
-      <img src={slideOneData.main_photo} />
+      <SlideOneMainImage src={slideOneData.main_photo} />
     </SlideOneMainDiv>
   );
 };
