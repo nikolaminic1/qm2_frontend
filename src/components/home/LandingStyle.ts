@@ -6,3 +6,7 @@ export const LandingMainDiv = styled.div`
   height: 100vh;
   width: 100vw;
 `;
+
+export const SlideOneMainDiv = styled.div`
+  background-color: aliceblue;
+`;

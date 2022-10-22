@@ -1,34 +1,21 @@
 import React, { FC, ReactElement } from "react";
 import { Carousel } from "antd";
+import SlideOne from "./landing/SlideOne";
+import SlideTwo from "./landing/SlideTwo";
+import SlideThree from "./landing/SlideThree";
 
 interface MainCarouselProps {
-  slidesData: {};
+  slidesData: any;
 }
 
-const contentStyle: React.CSSProperties = {
-  height: "160px",
-  color: "#fff",
-  lineHeight: "160px",
-  textAlign: "center",
-  background: "#364d79",
-};
-
-const MainCarousel: FC<MainCarouselProps> = ({}): ReactElement => {
-  const onChange = (currentSlide: number) => {
-    console.log(currentSlide);
-  };
+const MainCarousel: FC<MainCarouselProps> = ({ slidesData }): ReactElement => {
+  const onChange = (currentSlide: number) => {};
 
   return (
     <Carousel afterChange={onChange} autoplay>
-      <div>
-        <h3 style={contentStyle}>1</h3>
-      </div>
-      <div>
-        <h3 style={contentStyle}>2</h3>
-      </div>
-      <div>
-        <h3 style={contentStyle}>3</h3>
-      </div>
+      <SlideOne slideOneData={slidesData.slideOne} />
+      {/* <SlideTwo slideTwoData={slidesData} />
+      <SlideThree slideThreeData={slidesData} /> */}
     </Carousel>
   );
 };

@@ -8,9 +8,7 @@ interface LandingProps {
 }
 
 const Landing: FC<LandingProps> = ({ data }): ReactElement => {
-  const [mainCarouselSlide, setMainCarouselSlide] = useState(0);
-
-  console.log(data);
+  const [carouselSlide, setCarouselSlide] = useState(0);
 
   return (
     <LandingMainDiv>
