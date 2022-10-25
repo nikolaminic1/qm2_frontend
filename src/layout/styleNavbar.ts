@@ -7,6 +7,7 @@ export const MainNavbarDiv = styled.div`
   width: 1200px;
   height: 70px;
   border-radius: 0 0 40px 0;
+  padding-left: 100px;
 `;
 
 export const ItemsDiv = styled.div`
