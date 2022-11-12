@@ -8,11 +8,7 @@ interface SlideOneProps {
 const SlideOne: FC<SlideOneProps> = ({ slideOneData }): ReactElement => {
   console.log(slideOneData.main_photo);
 
-  return (
-    <SlideOneMainDiv>
-      <SlideOneMainImage src={slideOneData.main_photo} />
-    </SlideOneMainDiv>
-  );
+  return <SlideOneMainDiv></SlideOneMainDiv>;
 };
 
 export default SlideOne;

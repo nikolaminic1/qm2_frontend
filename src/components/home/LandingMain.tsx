@@ -17,8 +17,6 @@ const Landing: FC<LandingProps> = ({ data }): ReactElement => {
   return (
     <LandingMainDiv>
       <MainCarousel slidesData={data} />
-      <SecondaryCarouselDiv></SecondaryCarouselDiv>
-      <ThirdCarouselDiv></ThirdCarouselDiv>
     </LandingMainDiv>
   );
 };

@@ -4,9 +4,8 @@ export const MainNavbarDiv = styled.div`
   position: fixed;
   z-index: 1000;
   background-color: #edede9b3;
-  width: 1200px;
+  width: 100%;
   height: 70px;
-  border-radius: 0 0 40px 0;
   padding-left: 100px;
 `;
 
