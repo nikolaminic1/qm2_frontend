@@ -13,7 +13,7 @@ type Props = {
 const CLayout: React.FC<Props> = ({ title, children }) => {
   return (
     <LayoutDiv className="layouy-div">
-      <Navbar />
+      {/* <Navbar /> */}
       <Layout>
         <Content>
           <div className="main-content-div">{children}</div>
