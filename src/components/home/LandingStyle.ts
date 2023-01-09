@@ -60,39 +60,48 @@ export const LandingPartLeft = styled.div`
 
 export const LandingPartRight = styled.div`
   background-color: bisque;
+  display: flex;
   width: 92%;
 `;
 
 export const UpperPartRight = styled.div`
-  height: 60vh;
-  display: flex;
-  .upper-right-part-one {
-    width: 50%;
+  height: 100%;
+  width: 60%;
+
+  .left-upper {
+    width: 100%;
+    height: 60%;
+    text-align: left;
     background-color: blueviolet;
   }
-  .upper-right-part-two {
-    width: 40%;
+  .left-lower {
+    width: 100%;
+    height: 40%;
     background-color: gainsboro;
-  }
-  .upper-right-part-three {
-    width: 10%;
-    background-color: saddlebrown;
   }
 `;
 
 export const LowerPartRight = styled.div`
-  height: 40vh;
-  display: flex;
-  .lower-right-part-one {
-    width: 50%;
-    background-color: gold;
+  width: 40%;
+  height: 100%;
+
+  .right-upper {
+    height: 50%;
+    display: flex;
+
+    .right-upper-left {
+      width: 80%;
+      background-color: gold;
+    }
+    .right-upper-right {
+      width: 20%;
+      background-color: sandybrown;
+    }
   }
-  .lower-right-part-two {
-    width: 18%;
-    background-color: sandybrown;
-  }
-  .lower-right-part-three {
-    width: 32%;
+
+  .right-lower {
+    width: 100%;
+    height: 50%;
     background-color: green;
   }
 `;

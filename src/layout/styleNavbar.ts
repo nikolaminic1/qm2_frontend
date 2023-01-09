@@ -1,12 +1,18 @@
 import styled from "styled-components";
 
-export const MainNavbarDiv = styled.div`
+interface Props {
+  props: number;
+}
+
+export const MainNavbarDiv = styled.div<Props>`
   position: fixed;
   z-index: 1000;
-  background-color: #edede9b3;
+  background-color: #edede9;
   width: 100%;
   height: 70px;
   padding-left: 100px;
+  top: ${({ props }) => (props == 0 ? "-70px" : "0")};
+  transition: 0.4s all ease;
 `;
 
 export const ItemsDiv = styled.div`

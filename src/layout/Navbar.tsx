@@ -8,11 +8,13 @@ import {
 } from "./styleNavbar";
 import logo from "../_assets/logo_svg.svg";
 
-interface NavbarProps {}
+interface NavbarProps {
+  scrollPostion: number;
+}
 
-const Navbar: FC<NavbarProps> = ({}): ReactElement => {
+const Navbar: FC<NavbarProps> = ({ scrollPostion }): ReactElement => {
   return (
-    <MainNavbarDiv>
+    <MainNavbarDiv props={scrollPostion}>
       <ItemsDiv>
         <LogoDiv>
           <img src={logo} />

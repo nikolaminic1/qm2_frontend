@@ -1,5 +1,5 @@
 import { Layout } from "antd";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 import { LayoutDiv } from "./styleLayout";
 
@@ -11,9 +11,24 @@ type Props = {
 };
 
 const CLayout: React.FC<Props> = ({ title, children }) => {
+  const [yPostition, setYPostition] = useState(0);
+
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setYPostition(position);
+    console.log(position);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <LayoutDiv className="layouy-div">
-      {/* <Navbar /> */}
+      <Navbar scrollPostion={yPostition} />
       <Layout>
         <Content>
           <div className="main-content-div">{children}</div>

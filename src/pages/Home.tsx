@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import Landing from "../components/home/LandingMain";
+import Landing from "../components/home/LandingMainPc";
 import data from "../_data.json";
 import imgg from "../assets/home/landing/kitchen1.jpg";
 import SecondPart from "../components/home/SecondPart";
