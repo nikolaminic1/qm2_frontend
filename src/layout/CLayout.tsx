@@ -1,7 +1,11 @@
 import { Layout } from "antd";
+import { LayoutContextProps } from "antd/lib/layout/layout";
 import React, { useEffect, useState } from "react";
+import { useAppDispatch } from "../app/hooks";
+import Footer from "./Footer";
 import Navbar from "./Navbar";
-import { LayoutDiv } from "./styleLayout";
+import Sidebar from "./Sidebar";
+import { LayoutDiv, MainLayout } from "./styleLayout";
 
 const { Header, Content, Sider } = Layout;
 
@@ -12,10 +16,21 @@ type Props = {
 
 const CLayout: React.FC<Props> = ({ title, children }) => {
   const [yPostition, setYPostition] = useState(0);
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    if (sidebarOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "initial";
+    }
+  }, [sidebarOpen]);
 
   const handleScroll = () => {
     const position = window.pageYOffset;
     setYPostition(position);
+    // dispatch()
     console.log(position);
   };
 
@@ -29,11 +44,21 @@ const CLayout: React.FC<Props> = ({ title, children }) => {
   return (
     <LayoutDiv className="layouy-div">
       <Navbar scrollPostion={yPostition} />
-      <Layout>
+      <Sidebar
+        openSide={sidebarOpen}
+        closeEvent={() => setSidebarOpen(!sidebarOpen)}
+        width={300}
+        style={{ overflow: "scroll" }}
+      />
+      <MainLayout
+        openSide={sidebarOpen}
+        closeEvent={() => setSidebarOpen(!sidebarOpen)}
+      >
         <Content>
           <div className="main-content-div">{children}</div>
         </Content>
-      </Layout>
+      </MainLayout>
+      <Footer />
     </LayoutDiv>
   );
 };

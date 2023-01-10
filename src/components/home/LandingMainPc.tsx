@@ -14,9 +14,13 @@ import MainCarousel from "./MainCarousel";
 interface LandingProps {
   slideNumber?: number | 0;
   data: {};
+  closeEvent: () => void;
 }
 
-const LandingMainPc: FC<LandingProps> = ({ data }): ReactElement => {
+const LandingMainPc: FC<LandingProps> = ({
+  data,
+  closeEvent,
+}): ReactElement => {
   const [carouselSlide, setCarouselSlide] = useState(0);
 
   return (
@@ -25,7 +29,9 @@ const LandingMainPc: FC<LandingProps> = ({ data }): ReactElement => {
         {/* <MainCarousel slidesData={data} /> */}
         <LandingPartLeft>
           <div>
-            <div>hamburger</div>
+            <div>
+              <button onClick={() => closeEvent()}>menu</button>
+            </div>
             <div>explore</div>
             <div>
               <ul>

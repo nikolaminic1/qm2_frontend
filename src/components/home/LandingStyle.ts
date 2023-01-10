@@ -35,7 +35,12 @@ export const SlideOneMainImage = styled.img`
 
 export const SecondPartMainDiv = styled.div`
   height: 100vh;
-  background-color: #edede9;
+  background-color: #fff;
+`;
+
+export const ThirdPartMainDiv = styled.div`
+  height: 100vh;
+  background-color: #efefef;
 `;
 
 export const ThirdCarouselDiv = styled.div`
@@ -54,12 +59,12 @@ export const MainGridContainer = styled.div`
 `;
 
 export const LandingPartLeft = styled.div`
-  background-color: aqua;
+  background-color: #fff;
   width: 8%;
 `;
 
 export const LandingPartRight = styled.div`
-  background-color: bisque;
+  background-color: #fff;
   display: flex;
   width: 92%;
 `;
@@ -72,7 +77,7 @@ export const UpperPartRight = styled.div`
     width: 100%;
     height: 60%;
     text-align: left;
-    background-color: blueviolet;
+    background-color: #fff;
   }
   .left-lower {
     width: 100%;
@@ -95,13 +100,13 @@ export const LowerPartRight = styled.div`
     }
     .right-upper-right {
       width: 20%;
-      background-color: sandybrown;
+      background-color: #fff;
     }
   }
 
   .right-lower {
     width: 100%;
     height: 50%;
-    background-color: green;
+    background-color: #efefef;
   }
 `;

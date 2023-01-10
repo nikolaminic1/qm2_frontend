@@ -7,7 +7,7 @@ interface Props {
 export const MainNavbarDiv = styled.div<Props>`
   position: fixed;
   z-index: 1000;
-  background-color: #edede9;
+  background-color: #efefef;
   width: 100%;
   height: 70px;
   padding-left: 100px;
